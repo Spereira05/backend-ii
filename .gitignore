@@ -175,3 +175,5 @@ cython_debug/
 
 
 .solutions.md
+
+challenge_2_ai.py

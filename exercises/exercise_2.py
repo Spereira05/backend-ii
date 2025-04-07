@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-from typing import Protocol
 
 class Shape(ABC):
     @abstractmethod
