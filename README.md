@@ -1,4 +1,4 @@
-# Backend II
+ Backend II
 ## Session 1: Fundamentals of Big O Notation in Python Performance
 
 **Goal:**
@@ -824,3 +824,98 @@ CI/CD stands for Continuous Integration and Continuous Deployment. It automates 
 
 - Problem: Extend the CI/CD pipeline to include a deployment step that runs only when code is pushed to the main branch.
     - Hint: Use conditional steps and job dependencies.
+ 
+
+## Project Module: Agentic AI backend solution
+
+### Objective
+
+The primary objective of this project is to design and develop a robust Python backend solution that integrates advanced AI agent capabilities (via Crew AI). The solution should enable efficient handling of complex tasks by delegating responsibilities to AI agents, while ensuring seamless integration with traditional backend services provided by frameworks such as Django, FastAPI, or command line tools (CLIs).
+
+- Key aspects:
+    - Innovation: Demonstrate how AI agents can be utilised to improve decision making and automate backend operations.
+    - Integration: Seamlessly combine Crew AI’s agent framework with Python-based backend services.
+    - Scalability: Create a solution that can be scaled to support increased data loads and concurrent user requests.
+
+### Goal
+
+- The overall goal of the project is to implement an integrated backend system with the following targets:
+    - Robustness: Deliver a dependable solution that reliably processes and responds to API requests.
+    - Performance: Optimise backend performance and response times by using asynchronous processing where appropriate.
+    - Extensibility: Ensure the system is modular and can be extended with additional AI functionalities or services in the future.
+    - User Experience: Provide clear and user-friendly interfaces (e.g. API documentation, CLI tools) that facilitate easy interaction with the backend.
+
+### Requirements
+
+To achieve the objective and meet the project goal, the following requirements must be addressed:
+
+#### Functional Requirements
+    
+- AI Agents Integration:
+    - Utilise Crew AI to manage AI agents responsible for tasks such as data analysis, real-time recommendations, or process automation.
+    - Develop clear interfaces for communication between the backend and the AI agents.
+
+- Backend Service Implementation:
+    - Use Python as the primary language.
+    - Choose one or more frameworks (Django, FastAPI, or CLI-based solutions) to implement the core backend services.
+    - Implement RESTful API endpoints to expose the system’s functionalities.
+
+- Data Management:
+      - Integrate a reliable database solution (e.g. PostgreSQL, SQLite) for persistent data storage.
+      - Ensure secure data access and proper management of user sessions/authentication if required.
+
+- Security & Error Handling:
+    - Incorporate proper error handling and logging mechanisms.
+    - Implement security best practices (such as input validation, authentication, and authorisation).
+
+#### Non-Functional Requirements
+
+- Scalability: The system should handle increasing loads gracefully with provisions for scaling up services.
+- Performance: Optimise the backend for latency-sensitive operations, particularly where real-time AI decision-making is involved.
+- Maintainability:
+    - Codebase should follow standard coding conventions (e.g. PEP8).
+    - Adequate inline comments and external documentation should be provided.
+- Testing:
+    - Develop unit tests and integration tests to ensure code reliability.
+    - Incorporate automated testing and Continuous Integration/Continuous Deployment (CI/CD) where possible.
+
+### Evaluation (20 points)
+
+Your project will be evaluated based on the quality of what you deliver and how well it meets the objectives. Below is a checklist of everything that must be completed and what we’ll be looking for:
+
+1. **Source Code** (3 points)
+   - Clean, modular, and well-documented Python code.
+   - Hosted on GitHub/GitLab with a clear structure and meaningful commit messages (following conventional commits).
+   - A Git tag must be created before the final class session at 23h59 (Lisbon time).
+   - You must also upload a zip file of your project to the shared Google Drive folder.
+
+2. **Backend Application** (4 points)
+   - Built with **FastAPI**, **Django**, or a **CLI-based solution**.
+   - Fully working integration with **Crew AI**, demonstrating real use of AI agents.
+
+3. **AI Agent Integration** (3 points)
+   - At least one AI agent using **Crew AI**.
+   - Clear interface between your backend and the agent(s).
+   - Agents should perform useful tasks (e.g. analysis, automation, recommendations).
+
+4. **Database** (2 points)
+   - Persistent data storage using PostgreSQL or SQLite.
+   - If needed: basic authentication and session handling.
+
+5. **Documentation** (3 points)
+   - Technical documentation describing:
+     - System architecture.
+     - Usage.
+   - User guide for installation and usage.
+   - If using FastAPI: auto-generated API docs (e.g. Swagger UI/OpenAPI).
+   - Brief report summarising:
+     - What the project does.
+     - Implementation challenges and how you solved them.
+
+6. **Testing** (2 point)
+   - Unit and integration tests. (minimum of 1 meaningfull test per feature )
+   - Instructions to run tests.
+
+7. **Deployment** (3 point)
+   - Docker and Docker Compose for containerised deployment.
+   - CI/CD setup (script or GitHub Actions, etc.)
