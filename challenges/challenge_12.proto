@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package calculator;
+
+// Calculator service definition with streaming responses
+service CalculatorService {
+  // Generates a stream of prime numbers up to the given limit
+  rpc GeneratePrimes (PrimeRequest) returns (stream PrimeResponse) {}
+  
+  // Streams the Fibonacci sequence up to the given number of terms
+  rpc GenerateFibonacci (FibonacciRequest) returns (stream FibonacciResponse) {}
+  
+  // Calculates the factorial of a number and streams intermediate results
+  rpc CalculateFactorial (FactorialRequest) returns (stream FactorialResponse) {}
+}
+
+// Request message for prime number generation
+message PrimeRequest {
+  int32 limit = 1;  // Generate primes up to this number
+}
+
+// Response message containing a prime number
+message PrimeResponse {
+  int32 prime = 1;     // The prime number
+  int32 position = 2;  // Position in the sequence (1st, 2nd, etc.)
+}
+
+// Request message for Fibonacci sequence generation
+message FibonacciRequest {
+  int32 terms = 1;  // Number of Fibonacci terms to generate
+}
+
+// Response message containing a Fibonacci number
+message FibonacciResponse {
+  int64 number = 1;    // The Fibonacci number
+  int32 position = 2;  // Position in the sequence (1st, 2nd, etc.)
+}
+
+// Request message for factorial calculation
+message FactorialRequest {
+  int32 number = 1;  // Calculate factorial of this number
+}
+
+// Response message containing intermediate factorial results
+message FactorialResponse {
+  int64 result = 1;     // Current result
+  int32 step = 2;       // Current step in calculation (e.g., 3! = 6)
+  bool is_final = 3;    // Whether this is the final result
+}

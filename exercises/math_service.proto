@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package math;
+
+// Math service definition
+service MathService {
+  // Calculates the cube of a number
+  rpc Cube (CubeRequest) returns (CubeResponse) {}
+}
+
+// The request message containing the number to be cubed
+message CubeRequest {
+  double number = 1;
+}
+
+// The response message containing the result
+message CubeResponse {
+  double result = 1;
+}
